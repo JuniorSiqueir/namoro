@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #e79090;
+    --cor-secundaria: #270101;
+    --cor-terciaria: #ac2c36;
+
+    --font-primaria: 'Fjalla One', sans-serif;
+    --font-secundaria: 'Ubuntu', sans-serif;
+}
+
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    padding: 4% 0% 0% 12%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 50px;
+}
+
+.cabecalho__menu__info {
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao {
+    padding: 6% 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--font-secundaria);
+    color: var(--cor-secundaria);
+
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--font-primaria);
+}
+
+.apresentacao__imagem {
+    width: 45%;
+}
+
+
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1vw;
+    padding: 0 1vw;
+}
+
+.gallery-items {
+    width: 340px;
+    height: 250px;
+    border: 10px solid var(--cor-secundaria);
+    flex-grow: 0;
+}
+
+.gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:1100px) {
+
+    .cabecalho {
+        padding: 5%;
+        column-gap: 2;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__imagem {
+        width: 30%;
+        justify-content: center;
+    }
+
+}
